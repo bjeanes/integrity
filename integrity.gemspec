@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   ]
   
   deps.each do |dep|
-    if s.respond_to? :specification_version && Gem::Specification::CURRENT_SPECIFICATION_VERSION >= 3 then
+    if s.respond_to?(:specification_version) && Gem::Specification::CURRENT_SPECIFICATION_VERSION >= 3 then
       s.specification_version = 2
       s.add_runtime_dependency(*dep)
     else
