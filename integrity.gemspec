@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{integrity}
-  s.version = "0.1.4"
+  s.version = "0.1.4" # this should/could read in from VERSION.yml
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Nicol\303\241s Sanguinetti", "Simon Rozet"]
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.description = %q{Your Friendly Continuous Integration server. Easy, fun and painless!}
   s.email = %q{contacto@nicolassanguinetti.info}
   s.executables = ["integrity"]
-  s.files = ["README.markdown", "Rakefile", "VERSION.yml", "app.rb", "bin/integrity", "config/config.sample.ru", "config/config.sample.yml", "config/thin.sample.yml", "integrity.gemspec", "lib/integrity.rb", "lib/integrity/build.rb", "lib/integrity/project_builder.rb", "lib/integrity/core_ext/object.rb", "lib/integrity/core_ext/string.rb", "lib/integrity/core_ext/time.rb", "lib/integrity/notifier.rb", "lib/integrity/notifier/base.rb", "lib/integrity/project.rb", "lib/integrity/scm.rb", "lib/integrity/scm/git.rb", "lib/integrity/scm/git/uri.rb", "public/buttons.css", "public/reset.css", "public/spinner.gif", "vendor/sinatra-hacks/lib/hacks.rb", "views/build.haml", "views/build_info.haml", "views/error.haml", "views/home.haml", "views/integrity.sass", "views/layout.haml", "views/new.haml", "views/not_found.haml", "views/notifier.haml", "views/project.haml", "views/unauthorized.haml", "spec/spec_helper.rb", "spec/form_field_matchers.rb"]
+  s.files = Dir['{bin,lib,config,public,spec,views}/**/*'] + %w{app.rb integrity.gemspec Rakefile README.markdown VERSION.yml vendor/sinatra-hacks/lib/hacks.rb}
   s.homepage = %q{http://integrityapp.com}
   s.post_install_message = %q{Run `integrity help` for information on how to setup Integrity.}
   s.require_paths = ["lib"]
